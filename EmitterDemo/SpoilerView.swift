@@ -7,13 +7,7 @@ struct SpoilerView: UIViewRepresentable {
 
     func makeUIView(context: Context) -> EmitterView {
         let emitterView = EmitterView()
-        
-        let view = UIView()
-        view.backgroundColor = .white
-        view.frame = .init(x: 0, y: 0, width: 2, height: 2)
-        view.layer.cornerRadius = 1
-        view.layer.masksToBounds = true
-
+    
         let emitterCell = CAEmitterCell()
         emitterCell.contents = UIImage(named: "white-particle")?.cgImage
         emitterCell.contentsScale = 2
